@@ -1,0 +1,123 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/components/secHeader" as *;
+
+/*---------------------------------- header-classes -------------------------------------*/
+
+.head-classes {
+  width: 100%;
+  height: 570px;
+  background-image: url("../../assets/images/classes-in-banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .about-overlay {
+    background-color: $bg-overlay2;
+    width: 100%;
+    height: 100%;
+
+    .classes-body {
+      @extend .header-body;
+    }
+  }
+}
+
+/*---------------------------------- header-classes -------------------------------------*/
+
+/*---------------------------------------- main-classes -------------------------------- */
+
+.main-classes {
+  .row {
+    .card {
+      border: none;
+      overflow: hidden;
+      &:hover .popup {
+        @include tScale(1.05, 1.05);
+      }
+      .popup {
+        cursor: pointer;
+        @include trans(all, 0.4s);
+      }
+      .card-content {
+        background-color: $main-color;
+        .img-icon {
+          border-right: solid 1px #e1e1e1;
+          padding: 0px 10px;
+        }
+        h3 {
+          color: $second-color;
+          font-size: $font-size1 + 5px;
+          font-family: $font-family2;
+          font-weight: $font-weight3;
+          text-transform: capitalize;
+          line-height: 25px;
+          cursor: pointer;
+          @include trans(all, 0.3s);
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        p {
+          color: $text-color2;
+          font-size: 15px;
+          font-family: $font-family2;
+          padding: 0px 15px 0px 30px;
+        }
+        .number {
+          h6 {
+            color: $second-color;
+            font-size: 15px;
+            font-family: $font-family2;
+            font-weight: $font-weight3;
+            text-transform: capitalize;
+          }
+        }
+
+        .ranting1 {
+          @include ranting(70%);
+        }
+        .ranting2 {
+          @include ranting(90%);
+        }
+        .ranting3 {
+          @include ranting(60%);
+        }
+        .ranting4 {
+          @include ranting(85%);
+        }
+        .ranting5 {
+          @include ranting(90%);
+        }
+        .ranting6 {
+          @include ranting(80%);
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------- main-classes -------------------------------- */
+
+@media (max-width: 576px) {
+  .head-classes {
+    .classes-body {
+      h1 {
+        font-size: $font-size3 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .head-classes {
+    .classes-body {
+      h1 {
+        font-size: $font-size2 + 15px !important;
+      }
+    }
+  }
+}

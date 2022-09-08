@@ -1,0 +1,170 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/base/reset" as *;
+@use "../Scss/components/buttons" as *;
+
+* {
+  @extend .defualt;
+}
+
+/*------------------------------------media-query------------------------------------------*/
+nav {
+  @include trans(all, 0.5s);
+  .navbar-brand {
+    @include trans(all, 0.4s);
+    .sticky {
+      display: none;
+    }
+  }
+  .navbar-toggler {
+    @extend .defualt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 10px;
+    display: none;
+    span {
+      margin: 3px 0px;
+      display: inline-block;
+      width: 40px;
+      height: 3px;
+      background-color: $main-color;
+      margin-left: auto;
+    }
+    .s-width {
+      width: 35px;
+      margin-left: auto;
+    }
+  }
+
+  ul {
+    margin-top: 20px;
+
+    li {
+      padding-right: 20px;
+      ul {
+        li {
+          a {
+            color: $second-color !important;
+            &:hover {
+              background-color: transparent !important;
+              color: $primary-color !important;
+            }
+          }
+        }
+      }
+
+      a {
+        color: $main-color;
+        font-family: $font-family1;
+        font-weight: $font-weight1 + 100;
+        @include trans(color, 0.3s);
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      a.active {
+        color: $primary-color;
+      }
+
+      .circle {
+        border: 1px solid $main-color;
+        @include brdr-r(50%);
+        width: 37px;
+        height: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include trans(all, 0.3s);
+        i {
+          font-size: 13px;
+        }
+        &:hover {
+          background-color: $main-color;
+          color: $primary-color;
+        }
+      }
+
+      .btn {
+        @extend .btns1;
+      }
+    }
+  }
+}
+
+.nav-scroll {
+  background-color: $main-color;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  .navbar-brand {
+    @include trans(all, 0.4s);
+    .sticky {
+      display: flex;
+    }
+    .logo-white {
+      display: none;
+    }
+  }
+  ul {
+    li {
+      a {
+        color: $second-color;
+      }
+      .btn {
+        @include btns($primary-color, $second-color, $main-color);
+      }
+      .circle {
+        border-color:$second-color;
+        color: $second-color;
+        &:hover {
+          background-color: $primary-color;
+          color: $main-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------navbar------------------------------------------*/
+
+/*------------------------------------media-query------------------------------------------*/
+
+@media (max-width: 992px) {
+  nav {
+    z-index: 99999999;
+    background-color: $main-color !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    .navbar-brand {
+      .logo-white {
+        display: none;
+      }
+      .sticky {
+        display: flex;
+      }
+    }
+    .navbar-toggler {
+      background-color: $primary-color;
+      display: flex;
+    }
+
+    ul {
+      padding-left: 17px;
+      li {
+        a {
+          color: $second-color;
+        }
+        .circle {
+          display: none;
+        }
+        .btn {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------media-query------------------------------------------*/

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './app/Scss/base/reset' as *;
+
+
+*, html, body {
+    @extend .rest;
+}
+body {
+    overflow-x: hidden;
+}

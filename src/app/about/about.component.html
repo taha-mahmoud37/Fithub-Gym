@@ -1,0 +1,148 @@
+<!-- header about us -->
+
+<header class="head-about">
+  <div class="about-overlay d-flex align-items-center text-white">
+    <div class="container about-body pt-5">
+      <h1 class="mt-5" data-aos="fade-up" data-aos-duration="1000">about us</h1>
+      <ul class="list-unstyled d-flex justify-content-center" data-aos="fade-up-right" data-aos-duration="1200">
+        <li>
+          <a routerLink="/home">home</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+        </li>
+        <li>about us</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- header about us -->
+
+<!-- section about -->
+<app-subabout class="pb-5"></app-subabout>
+<!-- section about -->
+
+<!-- section feature-box -->
+
+<section class="container-fluid feature-box py-5">
+  <div class="row pt-5">
+    <div class="col-lg-3 col-md-6 col-sm-6 mb-3" data-aos="fade-up-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+      <div class="d-flex align-items-center feature-body rounded-3">
+        <div class="flex-shrink-0 bg-img">
+          <img src="../../assets/images/feature-1.png" alt="feature-1" />
+        </div>
+        <div class="flex-grow-1 ms-4">
+          <h4>Dedicated Service</h4>
+          <span class="txt"
+            >Nam laoreet ultricies vestibulum. Cras a odio tempo.</span
+          >
+        </div>
+        <span class="number">01</span>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
+      <div class="d-flex align-items-center feature-body rounded-3">
+        <div class="flex-shrink-0 bg-img">
+          <img src="../../assets/images/feature-2.png" alt="feature-1" />
+        </div>
+        <div class="flex-grow-1 ms-4">
+          <h4>Qualified Trainer</h4>
+          <span class="txt"
+            >Nam laoreet ultricies vestibulum. Cras a odio tempo.</span
+          >
+        </div>
+        <span class="number">02</span>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 mb-3" data-aos="fade-up" data-aos-duration="1000">
+      <div class="d-flex align-items-center feature-body rounded-3">
+        <div class="flex-shrink-0 bg-img">
+          <img src="../../assets/images/feature-3.png" alt="feature-1" />
+        </div>
+        <div class="flex-grow-1 ms-4">
+          <h4>Organic Proteins</h4>
+          <span class="txt"
+            >Nam laoreet ultricies vestibulum. Cras a odio tempo.</span
+          >
+        </div>
+        <span class="number">03</span>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 mb-3" data-aos="fade-up-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+      <div class="d-flex align-items-center feature-body rounded-3">
+        <div class="flex-shrink-0 bg-img">
+          <img src="../../assets/images/feature-4.png" alt="feature-1" />
+        </div>
+        <div class="flex-grow-1 ms-4">
+          <h4>Award Programs</h4>
+          <span class="txt"
+            >Nam laoreet ultricies vestibulum. Cras a odio tempo.</span
+          >
+        </div>
+        <span class="number">04</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section feature-box -->
+
+<!-- section main-video -->
+
+<section class="main-video" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="video-box">
+          <div class="video-content">
+            <div>
+              <h2 class="mb-3">Explore Fitness Life</h2>
+              <div class="play mb-4" (click)="oWindow()">
+                <i class="fa-solid fa-2x fa-play"></i>
+              </div>
+              <a href="#">watch more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div #lightScreen class="light-screen">
+    <div class="light-screen-small">
+      <iframe
+        src="https://www.youtube.com/embed/yUwpx81trCo?autoplay=1"
+        frameborder="0"
+      ></iframe>
+      <button class="cancel" (click)="close()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- section main-video -->
+
+<!-- section statics -->
+
+<app-statics></app-statics>
+
+<!-- section statics -->
+
+<!-- section testimonial -->
+
+<app-testimonials></app-testimonials>
+
+<!-- section testimonial -->
+
+<!-- section dwonload app -->
+
+<app-mobileapp></app-mobileapp>
+
+<!-- section dwonload app -->
+
+<!-- section trainers -->
+
+<app-trainers></app-trainers>
+
+<!-- section trainers -->

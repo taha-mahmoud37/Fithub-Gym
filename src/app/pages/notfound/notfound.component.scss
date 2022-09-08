@@ -1,0 +1,71 @@
+@use "../../Scss/utils/color" as *;
+@use "../../Scss/utils/font" as *;
+@use "../../Scss/utils/mixins" as *;
+@use "../../Scss/components/buttons" as *;
+@use "../../Scss/components/secHeader" as *;
+
+/*---------------------------------- header-notfound -------------------------------------*/
+
+.head-notfound {
+  width: 100%;
+  height: 570px;
+  @include backGround("../../../assets/images/error-404-banner.jpg");
+
+  .notfound-overlay {
+    background-color: $bg-overlay2;
+    width: 100%;
+    height: 100%;
+
+    .notfound-body {
+      @extend .header-body;
+      ul {
+        width: 220px;
+      }
+    }
+  }
+}
+
+/*---------------------------------- header-notfound -------------------------------------*/
+
+/*---------------------------------- section 404 error -------------------------------------*/
+
+.error-404 {
+  .error-content {
+    h2 {
+      font-size: $font-size3;
+      font-weight: $font-weight2;
+      font-family: $font-family1;
+      color: $second-color;
+      padding-top: 25px;
+    }
+    p {
+      color: $text-color2;
+      font-family: $font-family2;
+    }
+    .btn {
+      @include btns($primary-color, $second-color, $main-color);
+    }
+  }
+}
+
+/*---------------------------------- section 404 error -------------------------------------*/
+
+@media (max-width: 576px) {
+  .head-notfound {
+    .notfound-body {
+      h1 {
+        font-size: $font-size3 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .head-notfound {
+    .notfound-body {
+      h1 {
+        font-size: $font-size2 + 15px !important;
+      }
+    }
+  }
+}

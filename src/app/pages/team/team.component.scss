@@ -1,0 +1,377 @@
+@use "../../Scss/utils/color" as *;
+@use "../../Scss/utils/font" as *;
+@use "../../Scss/utils/mixins" as *;
+@use "../../Scss/base/reset" as *;
+@use "../../Scss/components/secHeader" as *;
+@use "../../Scss/components/buttons" as *;
+
+/*---------------------------------- header-team -------------------------------------*/
+
+.head-team {
+  width: 100%;
+  height: 570px;
+  @include backGround("../../../assets/images/team-in-banner.jpg");
+
+  .team-overlay {
+    background-color: $bg-overlay2;
+    width: 100%;
+    height: 100%;
+
+    .team-body {
+      @extend .header-body;
+      ul {
+        width: 170px;
+      }
+    }
+  }
+}
+
+/*---------------------------------- header-team -------------------------------------*/
+
+/* ---------------------------------------------- trainer ----------------------------------- */
+
+.trainers {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+
+  .cards {
+    .team-img {
+      padding: 15px;
+      border: 10px solid #ebebeb;
+      @include trans(border-color, 0.4s);
+      overflow: hidden;
+
+      &:hover {
+        border-color: $primary-color;
+      }
+      &:hover img {
+        @include tScale(1.05, 1.05);
+      }
+      img {
+        @include trans(all, 0.4s);
+      }
+    }
+
+    .team-content {
+      h4 {
+        color: $second-color;
+        font-size: $font-size2;
+        font-family: $font-family1;
+        font-weight: $font-weight1 + 100;
+        cursor: pointer;
+        @include trans(color, 0.4s);
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      p {
+        font-size: $font-size1;
+        font-family: $font-family1;
+        font-weight: $font-weight2;
+        color: $text-color2;
+      }
+
+      .trainer-icons {
+        .icons {
+          width: 35px;
+          height: 35px;
+          border: 1px solid $primary-color;
+          @include brdr-r(50%);
+          margin-right: 5px;
+          margin-left: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include trans(all, 0.4s);
+          color: $primary-color;
+          i {
+            font-size: 15px;
+          }
+
+          &:hover {
+            background-color: $primary-color;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------- trainer ----------------------------------- */
+
+/* ---------------------------------------------- statics ----------------------------------- */
+
+.statics {
+  margin-top: 20px;
+
+  .row {
+    .statics-body {
+      .body-head {
+        @extend .header-content1;
+        align-items: flex-start;
+        top: 0vh;
+      }
+      p {
+        color: $testimonial-color;
+        font-family: $font-family2;
+      }
+      .number {
+        width: 90%;
+        h6 {
+          color: $second-color;
+          font-size: $font-size1 + 4px;
+          font-family: $font-family1;
+          font-weight: $font-weight2;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+        }
+      }
+      .ranting1 {
+        @include rantingStatics(90%, 0%);
+        background-color: rgb(253, 61, 12, 0.2);
+      }
+      .ranting2 {
+        @include rantingStatics(90%, 10%);
+        background-color: rgb(253, 61, 12, 0.2);
+      }
+    }
+
+    .statics-form {
+      @include brdr-r(10px);
+      padding: 60px 60px 40px;
+      background-color: $card-color;
+      h2 {
+        color: $main-color;
+        font-size: $font-size2 + 20px;
+        font-family: $font-family1;
+        font-weight: $font-weight2;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100px;
+          height: 1px;
+          background-color: $primary-color;
+          position: absolute;
+          bottom: 0px;
+          left: 0%;
+        }
+      }
+
+      .form {
+        .form-control {
+          @extend .defualt;
+          padding: 15px 20px;
+          font-family: $font-family2;
+        }
+        .btn {
+          @extend .defualt;
+          @include btns($primary-color, $second-color, $main-color);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------- statics ----------------------------------- */
+
+/*------------------------------------media-query------------------------------------------*/
+
+@media (max-width: 992px) and (min-width: 768px) {
+  /*----------- trainer ----- */
+  .trainers {
+    .cards {
+      .team-img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  /*----------- trainer -------- */
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  /*----------- trainer ----- */
+  .trainers {
+    .cards {
+      .team-img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  /*----------- trainer -------- */
+
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}
+
+@media (max-width: 576px) {
+  .head-team {
+    .team-body {
+      h1 {
+        font-size: $font-size3 !important;
+      }
+    }
+  }
+  /*----------- trainer ----- */
+  .trainers {
+    .cards {
+      .team-img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  /*----------- trainer -------- */
+
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          font-size: $font-size2 + 15px !important;
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+    .statics-form {
+      padding: 30px !important;
+      h2 {
+        font-size: $font-size2 + 10px !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}
+
+@media (max-width: 450px) {
+  .head-team {
+    .team-body {
+      h1 {
+        font-size: $font-size2 + 15px !important;
+      }
+    }
+  }
+
+  /*----------- trainer ----- */
+  .trainers {
+    .cards {
+      .team-img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  /*----------- trainer -------- */
+
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          font-size: $font-size2 !important;
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+
+    .statics-form {
+      padding: 30px !important;
+      h2 {
+        font-size: $font-size2 + 5px !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}

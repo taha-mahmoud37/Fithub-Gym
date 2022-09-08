@@ -1,0 +1,224 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/components/buttons" as *;
+@use "../Scss/components/secHeader" as *;
+@use "../Scss/base/reset" as *;
+
+/* ---------------------------------------------- statics ----------------------------------- */
+
+.statics {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  background-color: $second-color;
+  .statics-overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/appointment-overlay-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .row {
+      .statics-body {
+        .body-head {
+          @extend .header-content;
+          align-items: flex-start;
+          top: 0vh;
+        }
+        p {
+          color: $testimonial-color;
+          font-family: $font-family2;
+        }
+        .number {
+          width: 90%;
+          h6 {
+            color: $main-color;
+            font-size: $font-size1 + 4px;
+            font-family: $font-family1;
+            font-weight: $font-weight2;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+          }
+        }
+        .ranting1 {
+          @include rantingStatics(90%, 0%);
+        }
+        .ranting2 {
+          @include rantingStatics(90%, 10%);
+        }
+      }
+
+      .statics-form {
+        @include brdr-r(10px);
+        padding: 60px 60px 40px;
+        background-color: $card-color;
+        h2 {
+          color: $main-color;
+          font-size: $font-size2 + 20px;
+          font-family: $font-family1;
+          font-weight: $font-weight2;
+          position: relative;
+          &::after {
+            content: "";
+            width: 100px;
+            height: 1px;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+          }
+        }
+
+        .form {
+          .form-control {
+            @extend .defualt;
+            padding: 15px 20px;
+            font-family: $font-family2;
+          }
+          .btn {
+            @extend .defualt;
+            @include btns($primary-color, $second-color, $main-color);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------- statics ----------------------------------- */
+
+/*------------------------------------media-query------------------------------------------*/
+
+@media (max-width: 992px) and (min-width: 768px) {
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}
+
+@media (max-width: 576px) {
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          font-size: $font-size2 + 15px !important;
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+    .statics-form {
+      padding: 30px !important;
+      h2 {
+        font-size: $font-size2 + 10px !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}
+
+@media (max-width: 450px) {
+  /*--------statics--------- */
+
+  .statics {
+    .statics-body {
+      .body-head {
+        p {
+          font-size: $font-size2 !important;
+          br {
+            display: none;
+          }
+        }
+      }
+      .number {
+        width: 100% !important;
+      }
+      .ranting1 {
+        @include rantingStatics(100%, 10%);
+        width: 100% !important;
+      }
+      .ranting2 {
+        @include rantingStatics(100%, 20%);
+        width: 100% !important;
+      }
+    }
+
+    .statics-form {
+      padding: 30px !important;
+      h2 {
+        font-size: $font-size2 + 5px !important;
+      }
+    }
+  }
+
+  /*--------statics--------- */
+}

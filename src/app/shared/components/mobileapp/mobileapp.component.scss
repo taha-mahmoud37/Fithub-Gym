@@ -1,0 +1,191 @@
+@use "../../../Scss/utils/color" as *;
+@use "../../../Scss/utils/font" as *;
+@use "../../../Scss/utils/mixins" as *;
+@use "../../../Scss/components/secHeader" as *;
+
+/*------------------------------------ dwonload ---------------------------------- */
+
+.dwonload {
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  background-color: $second-color;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../assets/images/download-app-overlay-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .img-app {
+      width: 100%;
+      height: 100%;
+      .mobile-img {
+        position: relative;
+        z-index: 4;
+      }
+      .circle-one {
+        position: absolute;
+        top: 0;
+        animation-name: rotate;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      .circle-two {
+        position: absolute;
+        top: 0;
+        animation-name: rotate;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes rotate {
+        0% {
+          @include trnsforms(0deg);
+        }
+        100% {
+          @include trnsforms(360deg);
+        }
+      }
+    }
+
+    .app-body {
+      .app-head {
+        @extend .header-content;
+        align-items: flex-start;
+        top: 0vh;
+
+        p {
+          font-size: $font-size2 + 25px;
+        }
+      }
+      p {
+        color: $text-color2;
+        font-family: $font-family2;
+      }
+      .store {
+        .store1 {
+          background-color: $primary-color;
+          padding: 10px 40px;
+        }
+
+        .store2 {
+          border: 2px solid $primary-color;
+          padding: 15px 40px;
+
+          span {
+            &:last-child {
+              color: $primary-color;
+            }
+          }
+        }
+        span {
+          color: $main-color;
+          display: block;
+
+          &:first-child {
+            font-size: $font-size1 + 3px;
+            font-family: $font-family1;
+            font-weight: $font-weight1;
+          }
+          &:last-child {
+            font-size: $font-size1 + 4px;
+            font-family: $font-family1;
+            font-weight: $font-weight3;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------ dwonload ---------------------------------- */
+
+/*---------------------------------------------- media-query ----------------------------*/
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .dwonload {
+    .app-body {
+      .app-head {
+        p {
+          font-size: $font-size2 + 15px !important;
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .store {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  .dwonload {
+    .app-body {
+      .app-head {
+        p {
+          font-size: $font-size2 + 15px !important;
+        }
+      }
+
+      .store {
+        justify-content: center;
+        span {
+          &:last-child {
+            font-size: $font-size1 + 2px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .dwonload {
+    .app-body {
+      .app-head {
+        p {
+          font-size: $font-size2 + 15px !important;
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .store {
+        justify-content: center;
+        flex-direction: column;
+        .store1 {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .dwonload {
+    .app-body {
+      .app-head {
+        p {
+          font-size: $font-size2 + 10px !important;
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .store {
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
+/*---------------------------------------------- media-query ----------------------------*/

@@ -1,0 +1,206 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/components/buttons" as *;
+@use "../Scss/components/secHeader" as *;
+@use "../Scss/base/reset" as *;
+
+/*------------------------------------- about us -------------------------------------*/
+
+.about {
+  position: relative;
+  top: 10vh;
+  .about-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .fitenss {
+      width: 100%;
+      height: 50%;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      @include brdr-r(10px);
+      .fitenss-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation-name: moveup;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+
+        @keyframes moveup {
+          0% {
+            bottom: 0px;
+          }
+          35% {
+            bottom: 30px;
+          }
+          70% {
+            bottom: 0px;
+          }
+          100% {
+            bottom: 10px;
+          }
+        }
+      }
+    }
+    .circle1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include trnsforms(180deg);
+      z-index: -2;
+      animation-name: rotate;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .circle2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      @include trnsforms(90deg);
+      animation-name: rotate;
+      animation-duration: 9s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    @keyframes rotate {
+      0% {
+        @include trnsforms(0deg);
+      }
+      100% {
+        @include trnsforms(360deg);
+      }
+    }
+  }
+
+  .about-content {
+    margin-left: 30px;
+    .h2-subtitle {
+      width: 30%;
+      background-color: $sub-color;
+      padding: 15px 0px;
+      text-transform: uppercase;
+      color: $primary-color;
+      font-family: $font-family1;
+      font-size: $font-size1 + 6px;
+      font-weight: $font-weight1 + 100;
+      @include brdr-r(10px);
+    }
+    .h2-title {
+      color: $text-color;
+      font-size: $font-size3;
+      font-family: $font-family1;
+      font-weight: $font-weight3;
+      text-transform: capitalize;
+    }
+    p {
+      color: $text-color2;
+      font-family: $font-family2;
+      font-weight: $font-weight1;
+    }
+    .trainer {
+      display: flex;
+      justify-content: space-around;
+      h4 {
+        font-family: $font-family1;
+        font-weight: $font-weight1 + 100;
+      }
+      span {
+        color: $text-color2;
+      }
+    }
+    .about-btn {
+      .btn {
+        @include btns($primary-color, $second-color, $main-color);
+        color: $main-color !important;
+      }
+    }
+  }
+}
+
+/*-------------------------------------- about us -----------------------------------*/
+
+/*------------------------------------media-query------------------------------------------*/
+
+@media (max-width: 992px) and (min-width: 768px) {
+  /*--------about us--------- */
+  .about {
+    .about-content {
+      .h2-title {
+        font-size: $font-size2 + 20px !important;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /*--------about us--------- */
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  /*--------about us--------- */
+  .about {
+    .about-content {
+      .h2-title {
+        font-size: $font-size2 + 15px !important;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /*--------about us--------- */
+}
+
+@media (max-width: 576px) {
+  /*--------about us--------- */
+  .about {
+    .about-content {
+      .h2-subtitle {
+        width: 35%;
+      }
+      .h2-title {
+        font-size: $font-size2 + 15px !important;
+        br {
+          display: none;
+        }
+      }
+      .trainer {
+        flex-direction: column !important;
+      }
+    }
+  }
+
+  /*--------about us--------- */
+}
+
+@media (max-width: 450px) {
+  /*--------about us--------- */
+  .about {
+    .about-content {
+      .h2-subtitle {
+        width: 50%;
+      }
+      .h2-title {
+        font-size: $font-size2 + 15px !important;
+        br {
+          display: none;
+        }
+      }
+      .trainer {
+        flex-direction: column !important;
+      }
+    }
+  }
+
+  /*--------about us--------- */
+}

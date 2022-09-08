@@ -1,0 +1,80 @@
+@use "./color" as *;
+
+@mixin trans($property, $time) {
+  transition: $property $time;
+  -webkit-transition: $property $time;
+  -moz-transition: $property $time;
+  -ms-transition: $property $time;
+  -o-transition: $property $time;
+}
+
+@mixin brdr-r($deg) {
+  border-radius: $deg;
+  -webkit-border-radius: $deg;
+  -moz-border-radius: $deg;
+  -ms-border-radius: $deg;
+  -o-border-radius: $deg;
+}
+
+@mixin trnsforms($deg) {
+  transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+}
+
+@mixin tScale($num1, $num2) {
+  transform: scale($num1, $num2);
+  -webkit-transform: scale($num1, $num2);
+  -moz-transform: scale($num1, $num2);
+  -ms-transform: scale($num1, $num2);
+  -o-transform: scale($num1, $num2);
+}
+
+@mixin ranting($width) {
+  width: 80%;
+  height: 10px;
+  background-color: $sub-color;
+  margin: 10px auto 20px auto;
+  position: relative;
+  @include brdr-r(10px);
+
+  &::after {
+    content: "";
+    width: $width;
+    height: 10px;
+    background-color: $primary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include brdr-r(10px);
+  }
+}
+
+@mixin rantingStatics($width, $minusW) {
+  width: $width;
+  height: 10px;
+  background-color: $sub-color;
+  position: relative;
+  @include brdr-r(10px);
+
+  &::after {
+    content: "";
+    width: calc($width - $minusW) !important;
+    height: 10px;
+    background-color: $primary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include brdr-r(10px);
+  }
+}
+
+@mixin backGround($background) {
+  background-image: url($background);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

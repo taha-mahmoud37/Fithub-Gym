@@ -1,0 +1,66 @@
+@use "../utils/color" as *;
+@use "../utils/font" as *;
+@use "../utils/mixins" as *;
+
+.btns1 {
+  background: linear-gradient(to top, $main-color 50%, $second-color 50%);
+  background-size: 100% 200%;
+  background-position: bottom;
+  color: $primary-color;
+  padding: 18px 45px;
+  margin-top: -13px !important;
+  font-family: $font-family2;
+  font-weight: $font-weight1 + 100;
+  font-size: 15px;
+  text-transform: uppercase;
+  @include brdr-r(10px);
+  @include trans(all, 0.3s);
+
+  &:hover {
+    background-position: top;
+  }
+}
+
+@mixin btns($prim, $second, $color, $color-brdr: "", $color-hover: "") {
+  background: linear-gradient(to top, $prim 50%, $second 50%);
+  background-size: 100% 300%;
+  background-position: bottom;
+  color: $color;
+  padding: 18px 45px;
+  margin-top: -5px !important;
+  font-family: $font-family2;
+  font-weight: $font-weight1 + 100;
+  font-size: 15px;
+  text-transform: uppercase;
+  @include brdr-r(10px);
+  @include trans(all, 0.6s);
+  cursor: pointer;
+
+  &:hover {
+    background-position: top;
+    border-color: $color-brdr;
+    color: $color-hover;
+  }
+}
+
+.btn-header {
+  background: linear-gradient(to top, $primary-color 50%, $main-color 50%);
+  background-size: 100% 300%;
+  background-position: bottom;
+  color: $main-color;
+  padding: 18px 45px;
+  margin-top: -8px !important;
+  font-family: $font-family2;
+  font-weight: $font-weight1 + 100;
+  font-size: 15px;
+  text-transform: uppercase;
+  @include brdr-r(10px);
+  @include trans(all, 0.5s);
+  border-color: $primary-color;
+
+  &:hover {
+    background-position: top;
+    color: $primary-color;
+    border-color: $main-color;
+  }
+}

@@ -1,0 +1,103 @@
+@use "../../../Scss/utils/color" as *;
+@use "../../../Scss/utils/font" as *;
+@use "../../../Scss/components/buttons" as *;
+@use "../../../Scss/components/secHeader" as *;
+
+/*---------------------------------------- pricing ---------------------------------------- */
+.pricing {
+  .pricing-header {
+    @extend .header-content1;
+  }
+  .standard-paln {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      color: $main-color;
+      text-transform: capitalize;
+      font-size: $font-size1 + 5px;
+      font-family: $font-family1;
+      font-weight: $font-weight3;
+      letter-spacing: 1px;
+    }
+    p {
+      color: $main-color;
+      font-size: $font-size2 + 5px;
+      font-family: $font-family1;
+      font-weight: $font-weight2 + 100;
+      letter-spacing: 1px;
+      sub {
+        font-size: $font-size1;
+      }
+    }
+  }
+  .bg-plan-1 {
+    background-color: $primary-color;
+  }
+  .bg-plan-2 {
+    background-color: $second-color;
+  }
+  .bg-plan-3 {
+    background-color: $main-color;
+    h3,
+    p {
+      color: $second-color;
+    }
+  }
+  .check-list {
+    p {
+      color: $text-color2;
+      font-family: $font-family2;
+    }
+  }
+  .btn-join {
+    width: 100%;
+    text-align: center;
+    .btn {
+      width: 80%;
+      @include btns(transparent, $second-color, $primary-color, $second-color);
+      border: 2px solid $primary-color;
+    }
+  }
+}
+
+/*---------------------------------------- pricing ---------------------------------------- */
+
+@media (max-width: 768px) and (min-width: 576px) {
+  /*----------- pricing ----- */
+  .pricing {
+    .pricing-header {
+      p {
+        font-size: $font-size2 + 10px !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- pricing -------- */
+}
+
+@media (max-width: 576px) {
+  /*----------- pricing ----- */
+  .pricing {
+    .pricing-header {
+      p {
+        font-size: $font-size2 + 10px !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- pricing -------- */
+}
+
+@media (max-width: 450px) {
+  /*----------- pricing ----- */
+  .pricing {
+    .pricing-header {
+      p {
+        font-size: $font-size2 !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- pricing -------- */
+}

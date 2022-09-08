@@ -1,0 +1,169 @@
+@use "../../Scss/utils/color" as *;
+@use "../../Scss/utils/font" as *;
+@use "../../Scss/utils/mixins" as *;
+@use "../../Scss/base/reset" as *;
+@use "../../Scss/components/secHeader" as *;
+@use "../../Scss/components/buttons" as *;
+
+/*---------------------------------- header-blog -------------------------------------*/
+
+.head-blog {
+  width: 100%;
+  height: 570px;
+  @include backGround("../../../assets/images/blog-grid-in-banner.jpg");
+
+  .blog-overlay {
+    background-color: $bg-overlay2;
+    width: 100%;
+    height: 100%;
+
+    .blog-body {
+      @extend .header-body;
+      ul {
+        width: 200px;
+      }
+    }
+  }
+}
+
+/*---------------------------------- header-blog -------------------------------------*/
+
+/* ---------------------------------------------- news ----------------------------------- */
+
+.news {
+  .row {
+    .card {
+      overflow: hidden;
+      @include trans(box-shadow, 0.3s);
+      &:hover {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      }
+      &:hover img {
+        @include tScale(1.05, 1.05);
+      }
+
+      .img-blog {
+        position: relative;
+        overflow: hidden;
+        img {
+          @include trans(all, 0.4s);
+        }
+        span {
+          display: inline-block;
+          background-color: $primary-color;
+          color: $main-color;
+          padding: 15px 25px;
+          font-size: 15px;
+          font-family: $font-family2;
+          font-weight: $font-weight1 + 100;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .card-content {
+        h3 {
+          color: #000000;
+          font-size: $font-size1 + 6px;
+          font-weight: $font-weight3;
+          font-family: $font-family1;
+          cursor: pointer;
+          @include trans(all, 0.3s);
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        p {
+          color: $text-color2;
+          font-family: $font-family2;
+        }
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $primary-color;
+          font-family: $font-family2;
+          font-weight: $font-weight1;
+          letter-spacing: 1px;
+          border-bottom: 2px solid $primary-color;
+          @include trans(all, 0.3s);
+          &:hover {
+            color: $second-color;
+            border-color: $second-color;
+          }
+        }
+      }
+    }
+  }
+  .blog-pag {
+    .page-item {
+      width: 50px;
+      height: 50px;
+      color: $text-color2;
+      background-color: #ebebeb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-size1 + 2px;
+      font-family: $font-family1;
+      font-weight: $font-weight1 + 100;
+      @include brdr-r(50%);
+      @include trans(all, 0.4s);
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $main-color;
+      }
+    }
+    .page-item:first-child,
+    .page-item:last-child {
+      background-color: transparent;
+      i {
+        color: $second-color;
+        font-size: $font-size2;
+        &:hover {
+          color: #0a58ca;
+        }
+      }
+    }
+    .active {
+      background-color: $primary-color;
+      color: $main-color;
+    }
+  }
+}
+
+/* ---------------------------------------------- news ----------------------------------- */
+
+@media (max-width: 576px) {
+  .head-blog {
+    .blog-body {
+      h1 {
+        font-size: $font-size3 !important;
+      }
+    }
+  }
+
+  /*--------news--------- */
+  .news {
+    .img-blog {
+      .full-w {
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------news--------- */
+}
+
+@media (max-width: 450px) {
+  .head-blog {
+    .blog-body {
+      h1 {
+        font-size: $font-size2 + 15px !important;
+      }
+    }
+  }
+}

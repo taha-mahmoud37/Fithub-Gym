@@ -1,0 +1,145 @@
+@use "../Scss/base/reset" as *;
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+
+/*------------------------------------ main-video ---------------------------------- */
+
+.main-video {
+  position: relative;
+  top: 30vh;
+  z-index: 2;
+  .video-box {
+    background: url("../../assets/images/video-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+
+    .video-content {
+      width: 100%;
+      height: 100%;
+      background-color: $bg-overlay;
+      color: $main-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        font-size: $font-size2 + 20px;
+        font-family: $font-family1;
+        font-weight: $font-weight3;
+        letter-spacing: 2px;
+      }
+      .play {
+        margin: auto;
+        width: 80px;
+        height: 80px;
+        background-color: $primary-color;
+        @include brdr-r(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      a {
+        color: $main-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 2px solid $main-color;
+        font-size: $font-size1;
+        font-family: $font-family2;
+        font-weight: $font-weight1;
+        @include trans(all, 0.3s);
+        &:hover {
+          color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+  .light-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include trans(all, 0.4s);
+    @include tScale(0, 0);
+    z-index: 9999999999;
+
+    .light-screen-small {
+      width: 600px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+      .cancel {
+        position: absolute;
+        top: 60px;
+        background-color: $second-color;
+        color: $main-color;
+        padding: 6px 10px;
+        @include brdr-r(4px);
+        @extend .defualt;
+
+        i {
+          font-size: $font-size1 + 2px;
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------ main-video ---------------------------------- */
+
+/*------------------------------------ media-query ---------------------------------- */
+
+@media (max-width: 576px) {
+  /*--------------------------------- main-video------------------------ */
+  .main-video {
+    .light-screen-small {
+      iframe {
+        width: 80% !important;
+        height: 80% !important;
+      }
+      .cancel {
+        top: 90px !important;
+        right: 20px !important;
+      }
+    }
+  }
+
+  /*--------------------------------- main-video------------------------ */
+}
+
+@media (max-width: 450px) {
+  /*--------------------------------- main-video------------------------ */
+  .main-video {
+    .light-screen-small {
+      iframe {
+        width: 90% !important;
+        height: 80% !important;
+      }
+      .cancel {
+        top: 110px !important;
+        right: 5px !important;
+      }
+    }
+  }
+
+  /*--------------------------------- main-video------------------------ */
+}

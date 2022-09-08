@@ -1,0 +1,125 @@
+<nav class="navbar navbar-expand-lg fixed-top py-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/images/logo.png" class="logo-white" alt="logo" />
+      <img
+        src="../../assets/images/logo_stickey.png"
+        class="sticky"
+        alt="logo_stickey"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span class="s-width"></span>
+      <span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="home"
+            routerLink="home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="about"
+            routerLink="about"
+            routerLinkActive="active"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="Classes"
+            routerLink="classes"
+            routerLinkActive="active"
+            >Classes</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="pages"
+            routerLinkActive="active"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Pages
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="./portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="./team">Team</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="teamdetails">Team Details</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="faq">FAQ</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="pricing"> Pricing Table</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="blog"
+            routerLinkActive="active"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Blog
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="blogGrid">Blog Grid</a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="blogList">Blog List</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link actives"
+            aria-current="page"
+            routerLink="contact"
+            routerLinkActive="active"
+            >Contact Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <div class="circle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button class="btn">join now</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

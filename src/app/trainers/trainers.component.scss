@@ -1,0 +1,120 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/components/secHeader" as *;
+
+/* ---------------------------------------------- trainer ----------------------------------- */
+
+.trainers {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+
+  .tainer-header {
+    @extend .header-content1;
+  }
+
+  .cards {
+    .team-img {
+      padding: 15px;
+      border: 10px solid #ebebeb;
+      @include trans(border-color, 0.4s);
+      overflow: hidden;
+
+      &:hover {
+        border-color: $primary-color;
+      }
+      &:hover img {
+        @include tScale(1.05, 1.05);
+      }
+      img {
+        @include trans(all, 0.4s);
+      }
+    }
+
+    .team-content {
+      h4 {
+        color: $second-color;
+        font-size: $font-size2;
+        font-family: $font-family1;
+        font-weight: $font-weight1 + 100;
+        cursor: pointer;
+        @include trans(color, 0.4s);
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      p {
+        font-size: $font-size1;
+        font-family: $font-family1;
+        font-weight: $font-weight2;
+        color: $text-color2;
+      }
+
+      .trainer-icons {
+        .icons {
+          width: 35px;
+          height: 35px;
+          border: 1px solid $primary-color;
+          @include brdr-r(50%);
+          margin-right: 5px;
+          margin-left: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include trans(all, 0.4s);
+          color: $primary-color;
+          i {
+            font-size: 15px;
+          }
+
+          &:hover {
+            background-color: $primary-color;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------- trainer ----------------------------------- */
+
+@media (max-width: 768px) and (min-width: 576px) {
+  /*----------- trainer ----- */
+  .trainers {
+    .tainer-header {
+      p {
+        font-size: $font-size2 + 10px !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- trainer -------- */
+}
+
+@media (max-width: 576px) {
+  /*----------- trainer ----- */
+  .trainers {
+    .tainer-header {
+      p {
+        font-size: $font-size2 + 10px !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- trainer -------- */
+}
+
+@media (max-width: 450px) {
+  /*----------- trainer ----- */
+  .trainers {
+    .tainer-header {
+      p {
+        font-size: $font-size2 !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- trainer -------- */
+}

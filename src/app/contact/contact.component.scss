@@ -1,0 +1,142 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/components/secHeader" as *;
+@use "../Scss/components/buttons" as *;
+@use "../Scss/base/reset" as *;
+
+/*---------------------------------- header-contact -------------------------------------*/
+
+.head-contact {
+  width: 100%;
+  height: 570px;
+  background-image: url("../../assets/images/contact-us-in-banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .about-overlay {
+    background-color: $bg-overlay2;
+    width: 100%;
+    height: 100%;
+
+    .contact-body {
+      @extend .header-body;
+      ul {
+        width: 220px;
+      }
+    }
+  }
+}
+
+/*---------------------------------- header-contact -------------------------------------*/
+
+/* ---------------------------------------------- statics ----------------------------------- */
+
+.statics {
+  margin-top: 20px;
+
+  .row {
+    .contact-body {
+      .body-head {
+        @extend .header-content1;
+        align-items: flex-start;
+        top: 0vh;
+      }
+      .icon-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        @include brdr-r(50%);
+        background-color: $primary-color;
+      }
+      .icon-content {
+        h3 {
+          color: $second-color;
+          font-size: $font-size1 + 6px;
+          font-family: $font-family1;
+          font-weight: $font-weight2;
+        }
+        span {
+          color: $text-color2;
+          font-size: $font-size1 + 2px;
+          font-family: $font-family2;
+        }
+      }
+    }
+
+    .statics-form {
+      @include brdr-r(10px);
+      padding: 60px 60px 40px;
+      background-color: $card-color;
+      h2 {
+        color: $main-color;
+        font-size: $font-size2 + 20px;
+        font-family: $font-family1;
+        font-weight: $font-weight2;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100px;
+          height: 1px;
+          background-color: $primary-color;
+          position: absolute;
+          bottom: 0px;
+          left: 0%;
+        }
+      }
+
+      .form {
+        .form-control {
+          @extend .defualt;
+          padding: 15px 20px;
+          font-family: $font-family2;
+        }
+        .btn {
+          @extend .defualt;
+          @include btns($primary-color, $second-color, $main-color);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------- statics ----------------------------------- */
+
+/* ---------------------------------------------- map ----------------------------------- */
+
+.map {
+  width: 100%;
+  height: 500px;
+}
+
+/* ---------------------------------------------- map ----------------------------------- */
+
+
+
+
+
+
+@media (max-width: 576px) {
+  .head-contact {
+    .contact-body {
+      h1 {
+        font-size: $font-size3 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .head-contact {
+    .contact-body {
+      h1 {
+        font-size: $font-size2 + 15px !important;
+      }
+    }
+  }
+}

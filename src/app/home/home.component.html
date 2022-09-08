@@ -1,0 +1,396 @@
+<!-- header -->
+<header>
+  <div class="cover">
+    <div class="blur">
+      <img src="../../assets/images/blur-1.png" alt="blur" />
+    </div>
+    <div class="container pt-5 h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-6">
+          <div class="head">
+            <div
+              class="badges mb-4 d-flex justify-content-between align-items-center"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <span class="badge">the best</span>
+              fitness club
+            </div>
+            <div class="content">
+              <h1
+                class="text-white"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                work hard to <br />
+                get better life
+              </h1>
+              <p class="mb-5" data-aos="fade-up" data-aos-duration="1300">
+                Duis mollis felis quis libero dictum vehicula. Duis dictum lorem
+                <br />
+                mi, a faucibus nisi eleifend eu.
+              </p>
+              <button
+                type="button"
+                class="btn"
+                data-aos="fade-right"
+                data-aos-duration="1600"
+              >
+                get started
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="banner-img mt-5">
+            <img
+              src="../../assets/images/banner-img-1.png"
+              data-aos="fade-up"
+              data-aos-duration="1600"
+              class="img-fluid card-img"
+              alt="banner"
+            />
+            <div class="circle1 top-0 left-0">
+              <img
+                src="../../assets/images/banner-circle-one.png"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                alt="banner-circle-one"
+              />
+            </div>
+            <div class="circle2 top-0 left-0">
+              <img
+                src="../../assets/images/banner-circle-two.png"
+                data-aos="fade-up"
+                data-aos-duration="1300"
+                alt="banner-circle-one"
+              />
+            </div>
+            <div
+              class="heart-rate d-flex flex-column p-3 rounded-3"
+              data-aos="fade-up"
+              data-aos-duration="1800"
+            >
+              <img
+                src="../../assets/images/heart-rate.png"
+                class="mb-2 mt-1"
+                alt="heart-rate"
+              />
+              <span class="mb-2">heart rate</span>
+              <h3>100 bpm</h3>
+            </div>
+            <div
+              class="Calories p-2 rounded-3 d-flex align-items-center"
+              data-aos="fade-up"
+              data-aos-duration="1800"
+            >
+              <div class="px-3">
+                <img src="../../assets/images/calories.png" alt="Calories" />
+              </div>
+              <div class="Calorie-content d-flex flex-column">
+                <span>Calories Burned</span>
+                <h3>100 bpm</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header -->
+
+<!-- section about -->
+<app-subabout></app-subabout>
+<!-- section about -->
+
+<!-- section main-video -->
+
+<app-mainvideo></app-mainvideo>
+
+<!-- section main-video -->
+
+<!-- section main-classes -->
+
+<section class="main-classes">
+  <div class="container overlay py-5">
+    <div class="class-content text-center mt-3">
+      <h2 data-aos="fade-down" data-aos-duration="1000">our classes</h2>
+      <p data-aos="fade-right" data-aos-duration="1200">
+        Fitness Classes For Every Goal
+      </p>
+    </div>
+    <div
+      class="row"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom"
+      data-aos-duration="1400"
+    >
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="card ms-lg-4 mx-md-3">
+            <img
+              src="../../assets/images/class-img1.jpg"
+              class="img-fluid popup rounded-top"
+              alt="Class"
+            />
+            <div class="card-content">
+              <div class="d-flex p-4">
+                <div class="flex-shrink-0 pt-2">
+                  <img
+                    src="../../assets/images/class-icon1.png"
+                    alt="icon-woaman"
+                    class="img-icon"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-4 pt-2">
+                  <h3>
+                    weight lefting <br />
+                    classes
+                  </h3>
+                </div>
+              </div>
+              <p>
+                Suspendisse nisi libero, cursus ac magna sit amet, fermentum
+                imperdiet nisi.
+              </p>
+              <div class="number d-flex justify-content-between px-4">
+                <h6>class full</h6>
+                <h6>70%</h6>
+              </div>
+              <div class="ranting1"></div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="card ms-lg-4 mx-md-3">
+            <img
+              src="../../assets/images/class-img2.jpg"
+              class="img-fluid popup rounded-top"
+              alt="Class"
+            />
+            <div class="card-content">
+              <div class="d-flex p-4">
+                <div class="flex-shrink-0 pt-2">
+                  <img
+                    src="../../assets/images/class-icon2.png"
+                    alt="icon-woaman"
+                    class="img-icon"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-4 pt-2">
+                  <h3>
+                    cardio & strenght <br />
+                    classes
+                  </h3>
+                </div>
+              </div>
+              <p>
+                Suspendisse nisi libero, cursus ac magna sit amet, fermentum
+                imperdiet nisi.
+              </p>
+              <div class="number d-flex justify-content-between px-4">
+                <h6>class full</h6>
+                <h6>90%</h6>
+              </div>
+              <div class="ranting2"></div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="card ms-lg-4 mx-md-3">
+            <img
+              src="../../assets/images/class-img3.jpg"
+              class="img-fluid popup rounded-top"
+              alt="Class"
+            />
+            <div class="card-content">
+              <div class="d-flex p-4">
+                <div class="flex-shrink-0 pt-2">
+                  <img
+                    src="../../assets/images/class-icon3.png"
+                    alt="icon-woaman"
+                    class="img-icon"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-4 pt-2">
+                  <h3>
+                    power yoga <br />
+                    classes
+                  </h3>
+                </div>
+              </div>
+              <p>
+                Suspendisse nisi libero, cursus ac magna sit amet, fermentum
+                imperdiet nisi.
+              </p>
+              <div class="number d-flex justify-content-between px-4">
+                <h6>class full</h6>
+                <h6>60%</h6>
+              </div>
+              <div class="ranting3"></div>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="card ms-lg-4 mx-md-3">
+            <img
+              src="../../assets/images/class-img4.jpg"
+              class="img-fluid popup rounded-top"
+              alt="Class"
+            />
+            <div class="card-content">
+              <div class="d-flex p-4">
+                <div class="flex-shrink-0 pt-2">
+                  <img
+                    src="../../assets/images/class-icon4.png"
+                    alt="icon-woaman"
+                    class="img-icon"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-4 pt-2">
+                  <h3>
+                    power yoga <br />
+                    classes
+                  </h3>
+                </div>
+              </div>
+              <p>
+                Suspendisse nisi libero, cursus ac magna sit amet, fermentum
+                imperdiet nisi.
+              </p>
+              <div class="number d-flex justify-content-between px-4">
+                <h6>class full</h6>
+                <h6>85%</h6>
+              </div>
+              <div class="ranting4"></div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>
+
+<!-- section main-classes -->
+
+<!-- section pricing -->
+
+<app-pricing></app-pricing>
+
+<!-- section pricing -->
+
+<!-- section counter -->
+
+<app-counter></app-counter>
+
+<!-- section counter -->
+
+<!-- section trainer -->
+
+<app-subtrainers></app-subtrainers>
+
+<!-- section trainer -->
+
+<!-- section testimonial -->
+
+<app-testimonials></app-testimonials>
+
+<!-- section testimonial -->
+
+<!-- section main portfolio -->
+
+<app-portfolio></app-portfolio>
+
+<!-- section main portfolio -->
+
+<!-- section statics -->
+
+<app-statics></app-statics>
+
+<!-- section statics -->
+
+<!-- section news -->
+
+<section class="container news py-5">
+  <div class="news-content text-center mt-3">
+    <h2 data-aos="fade-down" data-aos-duration="1000">our news</h2>
+    <p data-aos="fade-right" data-aos-duration="1200">Latest Blog Feed</p>
+  </div>
+  <div class="row justify-content-center">
+    <div
+      class="col-lg-4 col-md-6 mb-4"
+      data-aos="fade-up-right"
+      data-aos-duration="1400"
+    >
+      <div class="card">
+        <div class="img-blog">
+          <img
+            src="../../assets/images/blog1.jpg"
+            class="img-fluid full-w rounded-top"
+            alt="Class"
+          />
+          <span>25 AUGUST 2022</span>
+        </div>
+        <div class="card-content p-4">
+          <h3 class="mb-2">Going to the gym for the first time</h3>
+          <p class="mb-2">
+            Praesent id ipsum pellentesque lectus dapibus condimentum curabitur
+            eget risus quam. In hac habitasse platea dictumst.
+          </p>
+          <a href="#">read more</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-4 col-md-6 mb-4"
+      data-aos="fade-up"
+      data-aos-duration="1400"
+    >
+      <div class="card">
+        <div class="img-blog">
+          <img
+            src="../../assets/images/blog2.jpg"
+            class="img-fluid full-w rounded-top"
+            alt="Class"
+          />
+          <span>25 AUGUST 2022</span>
+        </div>
+        <div class="card-content p-4">
+          <h3 class="mb-2">Parturient accumsan cacus pulvinar magna</h3>
+          <p class="mb-2">
+            Praesent id ipsum pellentesque lectus dapibus condimentum curabitur
+            eget risus quam. In hac habitasse platea dictumst.
+          </p>
+          <a href="#">read more</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-4 col-md-6 mb-4"
+      data-aos="fade-up-left"
+      data-aos-duration="1400"
+    >
+      <div class="card">
+        <div class="img-blog">
+          <img
+            src="../../assets/images/blog3.jpg"
+            class="img-fluid full-w rounded-top"
+            alt="Class"
+          />
+          <span>25 AUGUST 2022</span>
+        </div>
+        <div class="card-content p-4">
+          <h3 class="mb-2">Risus purus namien parturient accumsan cacus</h3>
+          <p class="mb-2">
+            Praesent id ipsum pellentesque lectus dapibus condimentum curabitur
+            eget risus quam. In hac habitasse platea dictumst.
+          </p>
+          <a href="#">read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section news -->

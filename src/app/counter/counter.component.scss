@@ -1,0 +1,52 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+
+/* ----------------------------------------- counter ---------------------------------------*/
+
+.counter {
+  background-color: $primary-color;
+  .row {
+    .counter-body {
+      h4 {
+        color: $main-color;
+        font-size: $font-size2 + 15px;
+        font-family: $font-family2;
+        font-weight: $font-weight2;
+        @include trnsforms(270deg);
+      }
+      span {
+        color: $main-color;
+        font-size: $font-size1 + 2px;
+        font-family: $font-family2;
+        font-weight: $font-weight2;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------- counter ---------------------------------------*/
+
+@media (max-width: 576px) {
+  /*----------- counter -------- */
+  .counter {
+    .counter-body {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /*----------- counter -------- */
+}
+
+@media (max-width: 450px) {
+  /*----------- counter -------- */
+  .counter {
+    .counter-body {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /*----------- counter -------- */
+}

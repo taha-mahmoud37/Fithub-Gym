@@ -1,0 +1,97 @@
+@use "../utils/color" as *;
+@use "../utils/font" as *;
+@use "../utils/mixins" as *;
+
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 35vh;
+  h2 {
+    background-color: $sub-color;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    font-family: $font-family2;
+    font-size: $font-size1 + 4px;
+    font-weight: $font-weight1 + 100;
+    @include brdr-r(10px);
+  }
+  p {
+    color: $main-color;
+    font-size: $font-size2 + 20px;
+    font-family: $font-family1;
+    font-weight: $font-weight3;
+  }
+}
+
+.header-content1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    background-color: $sub-color;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    font-family: $font-family2;
+    font-size: $font-size1 + 4px;
+    font-weight: $font-weight1 + 100;
+    @include brdr-r(10px);
+  }
+  p {
+    color: $second-color;
+    font-size: $font-size2 + 20px;
+    font-family: $font-family1;
+    font-weight: $font-weight3;
+  }
+}
+
+.footer-header {
+  color: $main-color;
+  text-transform: capitalize;
+  font-size: $font-size1 + 6px;
+  font-family: $font-family1;
+  font-weight: $font-weight2;
+  position: relative;
+  &::after {
+    content: "";
+    width: 63px;
+    height: 1px;
+    background-color: $primary-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.header-body {
+  margin-top: 50px;
+  h1 {
+    text-transform: capitalize;
+    font-size: $font-size3 + 15px;
+    font-family: $font-family1;
+    font-weight: $font-weight3;
+  }
+  ul {
+    width: 190px;
+    padding: 15px 10px;
+    margin-top: 20px;
+    @include brdr-r(15px);
+    background-color: $primary-color;
+    li {
+      text-transform: uppercase;
+      margin-right: 10px;
+      font-size: 15px;
+      font-family: $font-family2;
+      font-weight: $font-weight2;
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

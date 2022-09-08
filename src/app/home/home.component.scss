@@ -1,0 +1,677 @@
+@use "../Scss/utils/color" as *;
+@use "../Scss/utils/font" as *;
+@use "../Scss/utils/mixins" as *;
+@use "../Scss/components/buttons" as *;
+@use "../Scss/components/secHeader" as *;
+@use "../Scss/base/reset" as *;
+
+/*------------------------------------header------------------------------------------*/
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: $second-color;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 370px;
+    height: 100%;
+    background-color: $primary-color;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .cover {
+    background-image: url(../../assets/images/banner-overlay.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .blur {
+      position: absolute;
+      top: -790px;
+      left: -540px;
+      z-index: -1;
+    }
+
+    .container {
+      .row {
+        /*------------------------------------------head-content---------------------------------- */
+        .head {
+          .badges {
+            width: 55%;
+            background-color: $badge-color;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            @include brdr-r(10px);
+            font-family: $font-family1;
+            font-size: $font-size1 + 4px;
+            font-weight: $font-weight1 + 100;
+            color: $main-color;
+
+            .badge {
+              background-color: $primary-color;
+              padding: 8px 15px;
+              display: inline-block;
+              font-family: $font-family1;
+              font-size: $font-size1 + 4px;
+              font-weight: $font-weight1 + 100;
+            }
+          }
+          .content {
+            h1 {
+              text-transform: capitalize;
+              font-size: $font-size3 + 15px;
+              font-weight: $font-weight1 + 100;
+              font-family: $font-family1;
+              z-index: 99999;
+            }
+            p {
+              color: $text-color3;
+              font-size: $font-size1 + 2px;
+              font-family: $font-family1;
+              font-weight: $font-weight1 + 100;
+              letter-spacing: 1px;
+            }
+            .btn {
+              @extend .btn-header;
+            }
+          }
+        }
+        /*------------------------------------------head-content---------------------------------- */
+        /*------------------------------------------banner-img---------------------------------- */
+        .banner-img {
+          height: 100%;
+          position: relative;
+          top: 50px;
+          img {
+            height: 430px;
+          }
+          .circle1 {
+            position: absolute;
+            z-index: -99999;
+            @include trnsforms(180deg);
+            animation-name: rotate;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+          .circle2 {
+            position: absolute;
+            z-index: -99999999;
+            @include trnsforms(90deg);
+            animation-name: rotate;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
+          @keyframes rotate {
+            0% {
+              @include trnsforms(0deg);
+            }
+            100% {
+              @include trnsforms(360deg);
+            }
+          }
+          .heart-rate {
+            width: 120px;
+            height: 150px;
+            background-color: $second-color;
+            position: relative;
+            bottom: 220px;
+            left: 350px;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            img {
+              width: 37px;
+              height: 32px;
+            }
+            span {
+              font-family: $font-family1;
+              font-size: $font-size1 + 3px;
+              font-weight: $font-weight1 + 100;
+              text-transform: capitalize;
+              color: $text-color4;
+            }
+            h3 {
+              font-size: $font-size1 + 5px;
+              font-family: $font-family2;
+              font-weight: $font-weight1 + 100;
+              color: $main-color;
+            }
+            @keyframes move {
+              0% {
+                left: 300px;
+                bottom: 220px;
+              }
+              15% {
+                left: 290px;
+                bottom: 190px;
+              }
+              25% {
+                left: 310px;
+                bottom: 210px;
+              }
+              35% {
+                left: 340px;
+                bottom: 200px;
+              }
+              50% {
+                left: 300px;
+                bottom: 220px;
+              }
+              75% {
+                left: 270px;
+                bottom: 250px;
+              }
+              85% {
+                left: 300px;
+                bottom: 220px;
+              }
+              100% {
+                left: 350px;
+                bottom: 220px;
+              }
+            }
+          }
+
+          .Calories {
+            width: 250px;
+            height: 100px;
+            background-color: $card-color;
+            position: absolute;
+            bottom: 150px;
+            left: 0px;
+
+            img {
+              width: 37px;
+              height: 32px;
+            }
+            span {
+              font-family: $font-family1;
+              font-size: $font-size1 + 3px;
+              font-weight: $font-weight1 + 100;
+              text-transform: capitalize;
+              color: $text-color4;
+            }
+            h3 {
+              font-size: $font-size1 + 5px;
+              font-family: $font-family2;
+              font-weight: $font-weight1 + 100;
+              color: $main-color;
+            }
+          }
+        }
+        /*------------------------------------------banner-img---------------------------------- */
+      }
+    }
+  }
+}
+
+/*------------------------------------header------------------------------------------*/
+
+/*---------------------------------------- main-classes -------------------------------- */
+
+.main-classes {
+  width: 100%;
+  height: 1000px;
+  background-color: $second-color;
+  position: relative;
+  bottom: 10vh;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/classes-overlay-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .class-content {
+      @extend .header-content;
+    }
+    .row {
+      position: relative;
+      top: 35vh;
+      .card {
+        overflow: hidden;
+        .popup {
+          cursor: pointer;
+          @include trans(all, 0.4s);
+          &:hover {
+            @include tScale(1.05, 1.05);
+          }
+        }
+        .card-content {
+          background-color: $main-color;
+          .img-icon {
+            border-right: solid 1px #e1e1e1;
+            padding: 0px 10px;
+          }
+          h3 {
+            color: $second-color;
+            font-size: $font-size1 + 5px;
+            font-family: $font-family2;
+            font-weight: $font-weight3;
+            text-transform: capitalize;
+            line-height: 25px;
+            cursor: pointer;
+            @include trans(all, 0.3s);
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+          p {
+            color: $text-color2;
+            font-size: 15px;
+            font-family: $font-family2;
+            padding: 0px 15px 0px 30px;
+          }
+          .number {
+            h6 {
+              color: $second-color;
+              font-size: 15px;
+              font-family: $font-family2;
+              font-weight: $font-weight3;
+              text-transform: capitalize;
+            }
+          }
+
+          .ranting1 {
+            @include ranting(70%);
+          }
+          .ranting2 {
+            @include ranting(90%);
+          }
+          .ranting3 {
+            @include ranting(60%);
+          }
+          .ranting4 {
+            @include ranting(85%);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------------- main-classes -------------------------------- */
+
+/* ---------------------------------------------- news ----------------------------------- */
+
+.news {
+  .news-content {
+    @extend .header-content1;
+  }
+
+  .row {
+    .card {
+      overflow: hidden;
+      @include trans(box-shadow, 0.3s);
+      &:hover {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      }
+      &:hover img {
+        @include tScale(1.05, 1.05);
+      }
+
+      .img-blog {
+        position: relative;
+        overflow: hidden;
+        img {
+          @include trans(all, 0.4s);
+        }
+        span {
+          display: inline-block;
+          background-color: $primary-color;
+          color: $main-color;
+          padding: 15px 25px;
+          font-size: 15px;
+          font-family: $font-family2;
+          font-weight: $font-weight1 + 100;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      .card-content {
+        h3 {
+          color: #000000;
+          font-size: $font-size1 + 6px;
+          font-weight: $font-weight3;
+          font-family: $font-family1;
+          cursor: pointer;
+          @include trans(all, 0.3s);
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        p {
+          color: $text-color2;
+          font-family: $font-family2;
+        }
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $primary-color;
+          font-family: $font-family2;
+          font-weight: $font-weight1;
+          letter-spacing: 1px;
+          border-bottom: 2px solid $primary-color;
+          @include trans(all, 0.3s);
+          &:hover {
+            color: $second-color;
+            border-color: $second-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------- news ----------------------------------- */
+
+/*------------------------------------media-query------------------------------------------*/
+
+@media (max-width: 992px) and (min-width: 768px) {
+  /*----------header--------- */
+  header {
+    height: auto;
+    &::after {
+      width: 100%;
+      height: 250px;
+    }
+    .blur {
+      display: none;
+    }
+    .container {
+      margin-top: 20px;
+      .row {
+        padding-top: 40px;
+        justify-content: center;
+        text-align: center;
+        .head {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          .badges {
+            margin-top: 30px;
+            font-size: $font-size1 + 2px !important;
+            .badge {
+              font-size: $font-size1 + 2px !important;
+            }
+          }
+        }
+        .banner-img {
+          .circle1 {
+            left: 20% !important;
+          }
+          .circle2 {
+            left: 20% !important;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------header--------- */
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  /*--------header------------- */
+  header {
+    height: auto;
+    &::after {
+      width: 100%;
+      height: 250px;
+    }
+    .blur {
+      display: none;
+    }
+    .container {
+      margin-top: 10px;
+      .row {
+        padding-top: 40px;
+        justify-content: center;
+        text-align: center;
+        .head {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          .badges {
+            margin-top: 30px;
+            font-size: $font-size1 + 2px !important;
+            .badge {
+              font-size: $font-size1 + 2px !important;
+            }
+          }
+        }
+        .banner-img {
+          .circle1 {
+            left: 10% !important;
+          }
+          .circle2 {
+            left: 10% !important;
+          }
+        }
+      }
+    }
+  }
+  /*--------header------------- */
+
+  /*----------- main-classes ----- */
+  .main-classes {
+    .class-content {
+      p {
+        font-size: $font-size2 + 10px !important;
+        letter-spacing: 0px !important;
+      }
+      .card {
+        margin-left: -30px !important;
+      }
+    }
+  }
+  /*----------- main-classes -------- */
+
+  /*--------news--------- */
+  .news {
+    .img-blog {
+      .full-w {
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------news--------- */
+}
+
+@media (max-width: 576px) {
+  /*----------header---------- */
+  header {
+    height: auto;
+    &::after {
+      width: 100%;
+      height: 250px;
+    }
+    .blur {
+      display: none;
+    }
+    .container {
+      margin-top: 10px;
+      .row {
+        padding-top: 40px;
+        justify-content: center;
+        text-align: center;
+        .head {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+
+          .badges {
+            margin-top: 30px;
+            font-size: $font-size1 + 2px !important;
+            .badge {
+              font-size: $font-size1 + 2px !important;
+            }
+          }
+          .content {
+            h1 {
+              font-size: $font-size3 + 5px !important;
+              font-weight: $font-weight3 !important;
+            }
+            p {
+              font-size: $font-size1 !important;
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*----------header---------- */
+
+  /*----------- main-classes ----- */
+  .main-classes {
+    .class-content {
+      p {
+        font-size: $font-size2 + 10px !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- main-classes -------- */
+
+  /*--------news--------- */
+  .news {
+    .img-blog {
+      .full-w {
+        width: 100% !important;
+      }
+    }
+  }
+
+  /*--------news--------- */
+}
+
+@media (max-width: 450px) {
+  /*----------header---------- */
+  header {
+    height: auto;
+    &::after {
+      width: 100%;
+      height: 250px;
+    }
+    .blur {
+      display: none;
+    }
+    .container {
+      margin-top: 10px;
+      .row {
+        padding-top: 40px;
+        justify-content: center;
+        text-align: center;
+        .head {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+
+          .badges {
+            width: auto !important;
+            margin-top: 30px;
+            font-size: $font-size1 + 2px !important;
+            .badge {
+              margin-right: 10px;
+              font-size: $font-size1 + 2px !important;
+            }
+          }
+          .content {
+            h1 {
+              font-size: 45px !important;
+              br {
+                display: none;
+              }
+            }
+            p {
+              font-size: $font-size1 !important;
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .banner-img {
+          top: 0px !important;
+
+          .circle1 {
+            display: none;
+          }
+          .circle2 {
+            display: none;
+          }
+
+          .heart-rate {
+            left: 150px !important;
+            width: 100px;
+            height: 130px;
+            span {
+              font-size: $font-size1 !important;
+            }
+            h3 {
+              font-size: $font-size1 !important;
+            }
+          }
+          .Calories {
+            width: 200px !important;
+            height: 80px !important;
+            bottom: 100px !important;
+            span {
+              font-size: $font-size1 !important;
+            }
+            h3 {
+              font-size: $font-size1 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*----------header---------- */
+
+  /*----------- main-classes ----- */
+  .main-classes {
+    .class-content {
+      p {
+        font-size: $font-size2 !important;
+        letter-spacing: 0px !important;
+      }
+    }
+  }
+  /*----------- main-classes -------- */
+}
